@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        background: #2a2a2a;
+    }
+    .loading {
+        height: 40px;
+        width: 700px;
+        background: #ddd;
+        display: block;
+        margin: 20vw auto;
+        border-radius: 6pt;
+    }
+    .progress {
+        width: 60%;
+        height: 40px;
+        background-color: dodgerblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font: 400 14pt "Verdana", Sans-serif;
+        border-radius: 6pt;
+        animation: load 1s infinite;
+
+    }
+    @keyframes load {
+        from {
+            background: rgb(79, 110, 248);
+        }
+        to {
+            background: dodgerblue;
+    }
+    }
+</style>
+</head>
+
+<body>
+    <div class="loading"> <div class="progress"> 60%</div></div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+:root {
+    --black: #141414;
+    --color: #fcfcfc;
+    --darkbg: #1d1c1a;
+    --card-dark: #2a2a28;
+    --sub-color: #c1c1c1;
+    --accent: #383D50;
+    --def-font: "Work Sans", sans-serif;
+    --sec-font: 300 1.0rem var(--def-font);
+}
+html, body {
+    scroll-behavior: smooth;
+    transition: 0.4s all linear;
+}
+.c-section {
+    display: grid;
+    grid-area: csection;
+    grid-template: ". bavail blogos ." /
+     auto 45vw 50vw auto;
+    background: linear-gradient(110deg, #12121290, #12121290), url(images/suit-sec-2-bg.jpg) no-repeat center scroll;
+    background-size: cover;
+}
+
+div.brand-available {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: bavail;
+    padding: 0.8rem;
+}
+div.cntr-txt {
+    text-align: left;
+}
+h2.b-avail-title {
+    font: 300 2.8rem var(--def-font);
+    color: var(--color);
+}
+p.b-avail-desc {
+    color: var(--sub-color);
+    font: var(--sec-font);
+}
+div.brand-logos {
+    grid-area: blogos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.brand-logos > div.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+div.logo-container > img {
+    max-width: 120px;
+    height: auto;
+    margin: 0.6rem;
+    display: block;
+    
+    box-shadow: 0px 4px 10px rgba(20, 20, 22, 0.8);
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    background: var(--black);
+    border-top: 0.6rem solid var(--darkbg);
+}
+div.footer-links-container {
+    padding: 2rem 1.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+div.footer-link, div.footer-contact {
+    display: flex;
+    flex-flow: row wrap;
+    width: 44%;
+    margin-top: 0.6rem;
+}
+.link-label {
+    margin: 0.6rem;
+    color: var(--color);
+    font: 600 1rem var(--def-font);
+}
+div.footer-link{
+    justify-content: left;
+    flex-flow: column wrap;
+}
+div.footer-contact {
+    justify-content: right;
+
+}
+.fls, .fcl {
+    font: 300 1rem var(--def-font);
+    color: var(--sub-color);
+    text-decoration: none;
+    padding: 0.6rem;
+}
+
+.fic {
+    background: var(--card-dark);
+    padding: 0.6rem;
+}
+div.cpright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+}
+div.cpright > p {
+    color: var(--sub-color);
+}
+
+@media (max-width: 762px) {
+  .c-section {
+    display: grid;
+    grid-template: "bavail" 50vh "blogos"  / 100%;
+  }
+  div.logo-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto; 
+  }
+  div.logo-container > img {
+      max-width: 100px;
+      height: auto;
+  }
+  div.cntr-txt {
+      text-align: center;
+  }
+  div.footer-links-container {
+  	flex-flow: column wrap;
+  }
+div.footer-link, div.footer-contact {
+  	width: 90%;
+    justify-content: left;
+    margin-bottom: 1.2rem;
+ }
+}
