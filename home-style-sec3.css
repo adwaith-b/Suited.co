@@ -6,18 +6,19 @@
     --sub-color: #c1c1c1;
     --accent: #383D50;
     --def-font: "Work Sans", sans-serif;
-    --sec-font: 300 1.0rem var(--def-font);
+    --sec-font: 300 0.8rem var(--def-font);
 }
 html, body {
     scroll-behavior: smooth;
     transition: 0.4s all linear;
 }
+/* is actually b-section */
 .c-section {
     display: grid;
     grid-area: csection;
     grid-template: ". bavail blogos ." /
      auto 45vw 50vw auto;
-    background: linear-gradient(110deg, #12121290, #12121290), url(images/suit-sec-2-bg.jpg) no-repeat center scroll;
+    background: linear-gradient(110deg, #00000000, #00000000), url(images/suit-sec-2-bg.jpg) no-repeat center scroll;
     background-size: cover;
 }
 

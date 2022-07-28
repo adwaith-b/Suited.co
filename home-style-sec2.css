@@ -13,6 +13,7 @@ html, body {
     scroll-behavior: smooth;
     transition: 0.4s all linear;
 }
+/* is actually c-section */
 .b-section {
     display: grid;
     grid-area: bsection;
@@ -20,6 +21,7 @@ html, body {
     46vw 44vw;
     background: radial-gradient(circle,rgba(20,20,20, 0.8), rgba(20,20,20, 0.8), rgba(20,20,20, 0.8),rgba(20,20,20, 0.8)), url(images/sec2-img.jpeg) no-repeat center scroll;
     background-size: cover;
+    border-top: 0.6rem solid var(--darkbg);
 }
 .b-section .photo-div {
     grid-area: photo;
@@ -50,12 +52,12 @@ div.info-container {
 }
 p.info-text {
     color: var(--sub-color);
-    font: 400 0.8rem var(--sec-font);
-    margin-left: 0.6rem;
+    font: 400 0.66rem var(--def-font);
+    margin-left: 0.4rem;
 }
 .inf {
     color: var(--sub-color);
-    font-size: 1rem;
+    font-size: 1.0rem;
     margin-left: 2.0rem;
 }
 a.offers-display-a {
@@ -74,6 +76,7 @@ p.second-title {
     color: var(--sub-color);
     display: block;
     margin: 1.4rem 0;
+    font-size: 0.8rem;
 }
 div.cta2-container {
     background: none;

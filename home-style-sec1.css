@@ -9,6 +9,7 @@
     --sub-color: #c1c1c1;
     --accent: #444455;
     --def-font: "Work Sans", sans-serif;
+    --sec-font: monospace;
 }
 html, body {
     scroll-behavior: smooth;
@@ -25,7 +26,7 @@ body {
     "footer footer footer" auto / auto auto auto;
 }
 .a-section {
-    background: linear-gradient(110deg, #00000060, #22222268), url(images/brown-suit-man-sec1-ahome.jpg) no-repeat center scroll;
+    background: linear-gradient(110deg, #00000050, #22222248), url(images/brown-suit-man-sec1-ahome.jpg) no-repeat center scroll;
     background-size: cover;
     display: grid;
     grid-area: asection;
@@ -136,7 +137,7 @@ div.user-account > a {
 }
 .showcase-div p {
     color: #ccc;
-    font-size: 1rem;
+    font: var(--sec-font);
 }
 a.explore {
     padding: .8rem .6rem;
@@ -224,14 +225,13 @@ aside {
 }
 
 @media (max-width: 762px) {  /* Cellphones Device */
-    html, body {
-        font-size: 0.8rem;
-    }
+
     body {
         grid-template: "asection asection asection" 100vh 
-    "csection csection csection" 100vh
+    "csection csection csection" 90vh
     "bsection bsection bsection" 100vh
     "footer footer footer" auto / auto auto auto;
+    font: 300 14px var(--def-font);
     }
     .show-section {
         grid-template: "header header header" 8vh
