@@ -1,0 +1,257 @@
+ * { 
+    box-sizing: border-box;
+}
+:root {
+    --black: #141414;
+    --color: #fcfcfc;
+    --darkbg: #1d1c1a;
+    --card-dark: #2a2a28;
+    --sub-color: #c1c1c1;
+    --accent: #444455;
+    --def-font: "Work Sans", sans-serif;
+    --sec-font: monospace;
+}
+html, body {
+    scroll-behavior: smooth;
+    transition: 0.4s all linear;
+}
+body {
+    font: 300 15px var(--def-font);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: "asection asection asection" 100vh 
+    "csection csection csection" 100vh
+    "bsection bsection bsection" 100vh
+    "footer footer footer" auto / auto auto auto;
+}
+.a-section {
+    background: linear-gradient(110deg, #00000050, #22222248), url(images/brown-suit-man-sec1-ahome.jpg) no-repeat center scroll;
+    background-size: cover;
+    display: grid;
+    grid-area: asection;
+    grid-template: "header header header" 8vh
+    "showsec showsec showsec" 84vh 
+    "aside aside aside" 8vh / auto auto auto;
+}
+header {
+    background: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    box-shadow: 1px 1px 4px rgba(3, 3, 3, 0.4);
+}
+header .logo-div {
+    width: 30%;
+    border-radius: 2pt;
+    padding: 0.6rem;
+    color: #fefefe;
+    text-align: center;
+}
+.logo {
+    font: bold 18px 'Arial', helvetica, sans-serif;
+    color: var(--color);
+    letter-spacing: 140%;
+}
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    overflow: hidden;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    padding: 0.4rem;
+    margin: auto 0.6rem;
+    width: 45%;
+}
+.nav-container > a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    
+}
+.nav-container > a:hover {
+    font-weight: bold;
+    color: var(--color);
+}
+.hvr {
+    transform: scale(1);
+}
+.hvr:hover, .fab:hover {
+    transform: scale(1.4);
+    color: var(--color);
+}
+div.user-account {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: none;
+    color: var(--sub-color) ;
+    padding: 0.4rem;
+    margin: auto 0.6rem;
+    width: 45%;
+}
+div.user-account > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.4rem;
+    color: var(--sub-color);
+    position: relative;
+}
+.user-account > a::before {
+    content: "Accounts";
+    color: var(--sub-color);
+    margin-right: 0.8rem;
+}
+.show-section {
+    grid-area: showsec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.showcase-div {
+    text-align: center;
+    padding: 1.2rem;
+    transition: 1s;
+}
+.showcase-div .brand-name-h {
+    color: var(--color);
+    font: 600 40px var(--def-font);
+    letter-spacing: 140%;
+    line-height: 0.4rem;
+}
+.showcase-div .opacity {
+    background-color: var(--darkbg);
+    opacity: 0.6;
+}
+.showcase-div p {
+    color: #ccc;
+    font: var(--sec-font);
+}
+a.explore {
+    padding: .8rem .6rem;
+    margin: 2rem auto;
+    background: #00000060;
+    border: 1px solid var(--sub-color);
+    display: block;
+    color: var(--color);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font: 400 0.8rem var(--def-font);
+}
+a.explore:hover {
+    transition: all 0.8s;
+    background-color: var(--color);
+    color: var(--darkbg);
+}
+div.scroll-down {
+    display: block;
+    position: absolute;
+    bottom: 0.8rem;
+    left: 48.8%;
+    animation: scrolldown 1s infinite;
+}
+a.swipe, a.scroll {
+    color: var(--sub-color);
+    text-decoration: none;
+    opacity: 0.4;
+}
+a.swipe {
+    display: none;
+}
+a.scroll {
+    display: block;
+}
+aside {
+    background: none;
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.prefrnc-wrapper, .social-links-wrapper {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: var(--sub-color) ;
+    padding: 0.4rem;
+    margin: auto 0.6rem;
+    width: 45%;
+}
+.social-links-wrapper {
+    justify-content: flex-end;
+}
+.prefrnc-wrapper > a, .social-links-wrapper > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.4rem;
+    color: var(--sub-color);
+    position: relative;
+}
+.social-links-wrapper > a {
+    transform: scale(1.4);
+    margin-left: 0.6rem;
+}
+.prefrnc-btn {
+    color: var(--sub-color);
+}
+.prefrnc-btn::after {
+    content: "Preferences";
+    color: var(--sub-color);
+    margin-left: 0.6rem;
+}
+@keyframes fadeup {
+	0% {
+		transform: translate(0, 100px);
+		opacity: 0.2;
+	}
+
+	100% {
+		transform: translate(0,0);
+		opacity: 1.0;
+	}
+}
+
+@media (max-width: 762px) {  /* Cellphones Device */
+
+    body {
+        grid-template: "asection asection asection" 100vh 
+    "csection csection csection" 90vh
+    "bsection bsection bsection" 100vh
+    "footer footer footer" auto / auto auto auto;
+    font: 300 14px var(--def-font);
+    }
+    .show-section {
+        grid-template: "header header header" 8vh
+        "showsec showsec showsec" 84vh
+        "aside aside aside" 8vh / auto auto auto;
+    }
+    .showcase-div h1 {
+        font-size: 2.4rem;
+    }
+    .nav-container {
+        width: 100%;
+    }
+    div.user-account {
+        display: none;
+    }
+    .user-status {
+        display: none;
+    }
+    
+    div.scroll-down {
+    	left: 47.8%;
+    }
+} 
